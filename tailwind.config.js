@@ -7,6 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: '520px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1440px',
+      },
       colors: {
         black: '#1F1F1F',
         gray700: '#344054',
@@ -15,12 +22,6 @@ module.exports = {
         greenNormal: '#19E19B',
         greenActive: '#14B47C'
       },
-      screens: {
-        sm: '520px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px'
-      }
     }
   },
   plugins: []
