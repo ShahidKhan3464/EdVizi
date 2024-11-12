@@ -53,7 +53,7 @@ export const CustomModal = ({
                 text={cancelBtnText}
                 onClick={() => onClose && onClose()}
                 style={{ color: '#4B5565', backgroundColor: 'transparent' }}
-                className="btn-primary w-full border border-solid border-[#D0D5DD]"
+                className="btn-primary w-full border border-solid border-gray300"
               />
             )}
             <CustomButton

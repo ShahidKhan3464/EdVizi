@@ -1,14 +1,9 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 
-function useSelect({ name, formik }) {
+function useSelect() {
   const dropdownRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownPosition, setDropdownPosition] = useState('bottom');
-
-  const error = formik.errors[name];
-  const touched = formik.touched[name];
-
-  const borderColor = error && touched ? 'border-red-500' : '';
 
   // Memoized function to handle clicks outside the dropdown
   const handleOutsideClick = useCallback((event) => {
@@ -45,7 +40,6 @@ function useSelect({ name, formik }) {
     isOpen,
     setIsOpen,
     dropdownRef,
-    borderColor,
     dropdownPosition
   };
 }

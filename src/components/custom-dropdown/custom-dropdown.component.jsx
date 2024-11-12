@@ -14,7 +14,7 @@ export const CustomDropdown = ({ name, value, options, onChange }) => {
           type="button"
           onClick={() => setIsOpen((prevIsOpen) => !prevIsOpen)}
           className={
-            'px-[18px] h-11 w-full capitalize flex-center gap-2 bg-white rounded-xl border border-solid border-[#D0D5DD]'
+            'px-[18px] h-11 w-full capitalize flex-center gap-2 bg-white rounded-xl border border-solid border-gray300'
           }
         >
           <div>

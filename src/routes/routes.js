@@ -1,8 +1,10 @@
 import { lazy } from 'react';
 import { Navigate } from 'react-router-dom';
 
+const LayoutContent = lazy(() => import("layout"));
 const Login = lazy(() => import('pages/login/login'));
 const SignUp = lazy(() => import('pages/sign-up/sign-up'));
+const EdVantageNavigator = lazy(() => import('pages/edVantage-navigator/edVantage-navigator'));
 
 const routes = [
   {
@@ -25,6 +27,14 @@ const routes = [
     permission: [],
     path: '/sign-up',
     component: SignUp
+  },
+  {
+    permission: [],
+    authenticated: false,
+    layout: LayoutContent,
+    name: "edVantage-navigator",
+    path: "/edVantage-navigator",
+    component: EdVantageNavigator,
   },
   {
     path: '*',
