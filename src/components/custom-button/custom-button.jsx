@@ -1,5 +1,5 @@
+import { CustomLoader } from 'components/custom-loader/custom-loader';
 import React from 'react';
-import { CustomLoader } from '../custom-loader/custom-loader.component';
 
 export const CustomButton = ({
   icon,
@@ -16,7 +16,7 @@ export const CustomButton = ({
   const renderContent = () => (
     <>
       {iconPosition === 'before' && icon}
-      {isLoading ? <CustomLoader circleColor='black' /> : text}
+      {isLoading ? <CustomLoader circleColor="black" /> : text}
       {iconPosition === 'after' && icon}
     </>
   );

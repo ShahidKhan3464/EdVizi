@@ -15,7 +15,6 @@ export default function Header() {
           <CustomSelect
             options={options}
             value={selectedValue}
-            name="allow_extra_floors"
             onChange={(name, value) => setSelectedValue(value)}
           />
         </div>

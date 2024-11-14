@@ -1,18 +1,16 @@
 import React from 'react';
 import { Icons } from 'assets';
-import GoogleMapComponent from './google-map';
 import useEdvantageNavigator from './use-edVantage-navigator';
-import { CustomInput } from 'components/custom-input/custom-input';
 import { CustomButton } from 'components/custom-button/custom-button';
+import { CustomSearchField } from 'components/custom-search-field/custom-search-field';
 
 const EdVantageNavigator = () => {
-  const { searchValue, setSearchValue } = useEdvantageNavigator();
+  const { setSearchQuery } = useEdvantageNavigator();
 
   return (
     <div>
       <h1 className="text-black font-semibold">SAM: Olivier Rigaud</h1>
       <div className="p-6 mt-2.5 bg-white rounded-2xl border border-solid border-gray200">
-        <GoogleMapComponent />
         <div className="flex-between mt-6">
           <div className="flex-center flex-col !items-baseline gap-2">
             <h2 className="text-2xl text-black font-semibold">
@@ -42,14 +40,9 @@ const EdVantageNavigator = () => {
             <h5 className="text-xl text-black font-semibold mb-3">
               Key Contacts
             </h5>
-            <div className="relative">
-              <CustomInput
-                type="text"
-                value={searchValue}
-                placeholder="Search"
-                onChange={(e) => setSearchValue(e.target.value)}
-              />
-            </div>
+            <CustomSearchField
+              handleSearchQueryChange={(value) => setSearchQuery(value)}
+            />
             <div className="mt-5 text-gray-600">
               <p className="text-gray700 font-semibold">
                 Name:{' '}
